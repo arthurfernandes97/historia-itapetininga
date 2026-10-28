@@ -1,7 +1,7 @@
 /* Cores e variáveis principais do site */
 :root {
-  /* Opt-out do escurecimento automático (Force Dark) do navegador */
-  color-scheme: only light;
+  /* Declara que o site já é escuro, para o navegador não escurecer de novo */
+  color-scheme: dark;
   --ink: #161412;
   --paper: #f4efe6;
   --wine: #5a2225;
@@ -10,6 +10,18 @@
   --amber-deep: #94581a;
   --line-light: rgba(22,20,18,.15);
   --ease: cubic-bezier(.23,1,.32,1);
+}
+
+/* Sinaliza suporte a tema escuro (mesmas cores, nada muda visualmente) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #161412;
+    --paper: #f4efe6;
+    --wine: #5a2225;
+    --amber: #c47c32;
+    --amber-soft: #d89f5b;
+    --amber-deep: #94581a;
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
