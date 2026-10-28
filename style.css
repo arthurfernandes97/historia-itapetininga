@@ -357,3 +357,34 @@ body {
   box-shadow: inset 0 0 0 100vmax #d89f5b !important;
   -webkit-text-fill-color: #161412 !important;
 }
+
+
+/* ============================================================
+   AJUSTE DOS TEXTOS QUE ESTAVAM APARECENDO ROSADOS
+   Fundo claro: títulos em vinho escuro.
+   Fundo escuro: título do quiz em âmbar claro para manter contraste.
+   ============================================================ */
+
+/* Títulos, anos e chamadas da linha do tempo */
+.paper-section .timeline-eyebrow,
+.paper-section .timeline-year small,
+.paper-section .timeline-year span,
+.paper-section .timeline-title,
+.paper-section .timeline-block .scroll-cue,
+.paper-section .timeline-block .scroll-cue span::after,
+.paper-section .timeline-intro-callout {
+  color: #5a2225 !important;
+  -webkit-text-fill-color: #5a2225 !important;
+}
+
+/* O título do quiz fica claro porque aparece sobre fundo escuro */
+.quiz-section .quiz-title {
+  color: #d89f5b !important;
+  -webkit-text-fill-color: #d89f5b !important;
+}
+
+/* Mantém o texto principal da capa na cor clara original */
+.hero-copy h1 {
+  color: #f4efe6 !important;
+  -webkit-text-fill-color: #f4efe6 !important;
+}
