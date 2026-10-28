@@ -1,14 +1,15 @@
 /* Cores e variáveis principais do site */
-:root {
-  color-scheme: dark;
-  --ink: #161412;
-  --paper: #f4efe6;
-  --wine: #5a2225;
-  --amber: #c47c32;
-  --amber-soft: #d89f5b;
-  --amber-deep: #94581a;
-  --line-light: rgba(22,20,18,.15);
-  --ease: cubic-bezier(.23,1,.32,1);
+{
+color-scheme: dark;
+
+--ink: #161412;
+--paper: #f4efe6;
+--wine: #5a2225;
+--amber: #c47c32;
+--amber-soft: #d89f5b;
+--amber-deep: #94581a;
+--line-light: rgba(22, 20, 18, .15);
+--ease: cubic-bezier(.23, 1, .32, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
