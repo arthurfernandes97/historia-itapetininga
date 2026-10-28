@@ -226,3 +226,9 @@ a { color: inherit; text-decoration: none; }
   .quiz-card { min-height: 440px; }
   .quiz-image { max-height: 220px; }
 }
+
+/* Resolvendo problemas Dark Mode */
+:root {
+  color-scheme: only dark;
+}
+
