@@ -269,3 +269,19 @@ a { color: inherit; text-decoration: none; }
   .quiz-card { min-height: 440px; }
   .quiz-image { max-height: 220px; }
 }
+
+/* Teste de reforço contra o modo escuro do Samsung Internet */
+.paper-section {
+  box-shadow: inset 0 0 0 9999px var(--paper);
+}
+
+.timeline-year span,
+.timeline-year small,
+.timeline-title {
+  -webkit-text-fill-color: var(--wine);
+}
+
+.timeline-eyebrow,
+.timeline-intro-callout {
+  -webkit-text-fill-color: var(--amber-deep);
+}
