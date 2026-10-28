@@ -1,6 +1,7 @@
 /* Cores e variáveis principais do site */
 :root {
-  color-scheme: dark;
+  /* Informa ao navegador para não adaptar a página a um esquema escuro automático. */
+  color-scheme: only light;
   --ink: #161412;
   --paper: #f4efe6;
   --wine: #5a2225;
