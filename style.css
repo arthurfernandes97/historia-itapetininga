@@ -247,10 +247,99 @@ a { color: inherit; text-decoration: none; }
   .quiz-image { max-height: 220px; }
 }
 
-/* Ajustes pontuais: preservar os fundos originais e escurecer os textos rosados. */
-/* Não adicionar regras globais de background ou box-shadow às seções. */
+/* ============================================================
+   CAMADA DE PRESERVAÇÃO DE CORES PARA NAVEGADORES MÓVEIS
+   Mantém os tons definidos pelo projeto e reforça os fundos
+   com preenchimento interno, sem alterar dimensões do layout.
+   ============================================================ */
 
-/* Botões da capa: mantém a proteção que funcionou, sem afetar o restante do site. */
+/* Solicita que os navegadores compatíveis não substituam as cores do autor. */
+*, *::before, *::after {
+  forced-color-adjust: none;
+}
+
+/* Fundos principais: preenchimento interno semelhante ao dos botões. */
+body {
+  color: #161412;
+  background-color: #161412;
+  background-image: linear-gradient(#161412, #161412);
+}
+
+.city-hero {
+  background-color: #161412;
+  background-image: linear-gradient(#161412, #161412);
+}
+
+/* A sobreposição da capa continua sendo controlada por .hero-overlay. */
+.hero-overlay {
+  forced-color-adjust: none;
+}
+
+.paper-section {
+  color: #161412;
+  background-color: #f4efe6;
+  box-shadow: inset 0 0 0 100vmax #f4efe6;
+}
+
+.quiz-section {
+  color: #f4efe6;
+  background-color: #161412;
+  background-image: linear-gradient(#161412, #161412);
+  box-shadow: inset 0 0 0 100vmax #161412;
+}
+
+.quiz-card {
+  background-color: #221f1b;
+  box-shadow: inset 0 0 0 100vmax #221f1b, 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.option-btn {
+  color: #f4efe6;
+  background-color: #2b2723;
+  box-shadow: inset 0 0 0 100vmax #2b2723;
+}
+.option-btn:hover {
+  background-color: #38332e;
+  box-shadow: inset 0 0 0 100vmax #38332e;
+}
+.option-btn.selected {
+  color: #ffffff;
+  background-color: #3e3328;
+  box-shadow: inset 0 0 0 100vmax #3e3328, inset 0 0 0 1px #c47c32;
+}
+
+.progress-fill {
+  background-color: #c47c32;
+  box-shadow: inset 0 0 0 100vmax #c47c32;
+}
+
+.btn-clean {
+  color: #161412;
+  background-color: #c47c32;
+  box-shadow: inset 0 0 0 100vmax #c47c32;
+}
+.btn-clean:hover {
+  background-color: #d89f5b;
+  box-shadow: inset 0 0 0 100vmax #d89f5b;
+}
+
+.site-footer {
+  color: rgba(244,239,230,.7);
+  background-color: #12100e;
+  background-image: linear-gradient(#12100e, #12100e);
+  box-shadow: inset 0 0 0 100vmax #12100e;
+}
+
+/* Reforça as cores dos textos sem mudar sua tipografia ou tamanho. */
+.hero-copy h1, .quiz-title, .quiz-question-text, .footer-name {
+  -webkit-text-fill-color: currentColor;
+}
+.timeline-year small, .timeline-year span, .timeline-title,
+.timeline-copy p, .timeline-figure figcaption, .timeline-intro-callout {
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Botões da capa: cores originais do projeto. */
 .hero-actions .cover-cta,
 .hero-actions .cover-cta:link,
 .hero-actions .cover-cta:visited {
@@ -261,7 +350,6 @@ a { color: inherit; text-decoration: none; }
   -webkit-text-fill-color: #161412 !important;
   forced-color-adjust: none;
 }
-
 .hero-actions .cover-cta:hover {
   color: #161412 !important;
   background-color: #d89f5b !important;
@@ -270,39 +358,35 @@ a { color: inherit; text-decoration: none; }
   -webkit-text-fill-color: #161412 !important;
 }
 
-/* Títulos, anos e chamadas da linha do tempo: vinho escuro. */
-.paper-section .timeline-eyebrow,
-.paper-section .timeline-year small,
-.paper-section .timeline-year span,
-.paper-section .timeline-title,
-.paper-section .timeline-block .scroll-cue,
-.paper-section .timeline-block .scroll-cue span::after,
-.paper-section .timeline-intro-callout {
+
+/* Corrige somente os textos rosados, sem alterar fundos ou layout */
+.paper-section h1,
+.paper-section h2,
+.paper-section h3,
+.paper-section h4,
+.timeline-year,
+.timeline-year small,
+.timeline-year span,
+.timeline-title,
+.timeline-intro-callout,
+.timeline-block .scroll-cue,
+.timeline-block .scroll-cue span,
+.timeline-block .scroll-cue span::after {
   color: #5a2225 !important;
   -webkit-text-fill-color: #5a2225 !important;
-  forced-color-adjust: none;
 }
 
-/* Chamadas de navegação: vinho escuro quando estiverem sobre fundo claro. */
-.paper-section .scroll-cue,
-.paper-section .scroll-cue span::after {
-  color: #5a2225 !important;
-  -webkit-text-fill-color: #5a2225 !important;
-  forced-color-adjust: none;
-}
-
-/* Quiz: título em âmbar claro para continuar legível no fundo escuro. */
-.quiz-section .quiz-title {
+/* Títulos sobre o fundo escuro do quiz */
+.quiz-title,
+.quiz-section h1,
+.quiz-section h2,
+.quiz-section h3 {
   color: #d89f5b !important;
   -webkit-text-fill-color: #d89f5b !important;
-  forced-color-adjust: none;
 }
 
-/* Mantém o título da capa claro e os textos principais sem tom rosado. */
-.hero-copy h1,
-.quiz-question-text,
-.footer-name {
-  color: #f4efe6 !important;
-  -webkit-text-fill-color: #f4efe6 !important;
-  forced-color-adjust: none;
+/* Mensagem de resposta incorreta no quiz */
+.feedback-title.incorrect-text {
+  color: #d89f5b !important;
+  -webkit-text-fill-color: #d89f5b !important;
 }
