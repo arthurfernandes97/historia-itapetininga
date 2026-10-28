@@ -10,43 +10,30 @@
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Proteção global para evitar inversão do Dark Mode do celular */
-html, body {
-  forced-color-adjust: none !important;
-  -webkit-forced-color-adjust: none !important;
+body {
   background-color: var(--ink) !important;
   color: var(--paper) !important;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-/* Seção principal e capa */
 .hero, .cover {
   position: relative;
   background-color: var(--ink) !important;
   color: var(--paper) !important;
-  forced-color-adjust: none !important;
   text-align: center;
   padding: 2rem 1rem;
 }
 
 .hero h1, .cover h1 {
   color: var(--paper) !important;
-  forced-color-adjust: none !important;
 }
 
 .hero p, .cover p {
   color: rgba(244, 239, 230, 0.9) !important;
-  forced-color-adjust: none !important;
 }
 
-/* Botões da capa com blindagem contra cores invertidas */
 .cover-cta,
 button.cover-cta,
 a.cover-cta {
@@ -62,11 +49,8 @@ a.cover-cta {
   border: none !important;
   cursor: pointer;
   transition: all 0.3s var(--ease);
-  forced-color-adjust: none !important;
-  -webkit-forced-color-adjust: none !important;
   background-color: var(--amber) !important;
   color: var(--ink) !important;
-  box-shadow: inset 0 0 0 100px #c47c32 !important;
 }
 
 .cover-cta:hover,
@@ -74,15 +58,11 @@ button.cover-cta:hover,
 a.cover-cta:hover {
   background-color: var(--amber-soft) !important;
   color: var(--ink) !important;
-  box-shadow: inset 0 0 0 100px #d89f5b !important;
 }
 
-/* Linha do tempo e significado */
 .timeline-section, .meaning-section {
   background-color: var(--paper) !important;
   color: var(--ink) !important;
-  forced-color-adjust: none !important;
-  -webkit-forced-color-adjust: none !important;
   padding: 2.5rem 1.5rem;
   border-radius: 8px;
   margin: 1.5rem auto;
@@ -91,20 +71,16 @@ a.cover-cta:hover {
 
 .meaning-section h2, .timeline-section h2 {
   color: var(--wine) !important;
-  forced-color-adjust: none !important;
 }
 
 .meaning-section p, .timeline-section p {
   color: var(--ink) !important;
-  forced-color-adjust: none !important;
 }
 
-/* Quiz cultural */
 .quiz-container {
   background-color: var(--ink) !important;
   color: var(--paper) !important;
   border: 1px solid var(--amber) !important;
-  forced-color-adjust: none !important;
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem auto;
@@ -122,7 +98,6 @@ a.cover-cta:hover {
   border-radius: 4px;
   text-align: left;
   cursor: pointer;
-  forced-color-adjust: none !important;
 }
 
 .quiz-option:hover {
@@ -130,7 +105,6 @@ a.cover-cta:hover {
   color: var(--paper) !important;
 }
 
-/* Responsividade para celulares */
 @media (max-width: 600px) {
   .hero, .cover {
     padding: 1.5rem 0.75rem;
