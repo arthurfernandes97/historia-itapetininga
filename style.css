@@ -1,5 +1,6 @@
 /* Cores e variáveis principais do site */
 :root {
+  color-scheme: only dark; /* Comando limpo para o navegador respeitar o tema escuro sem alterar o layout */
   --ink: #161412;
   --paper: #f4efe6;
   --wine: #5a2225;
@@ -10,7 +11,7 @@
   --ease: cubic-bezier(.23,1,.32,1);
 }
 
-* { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--ink); font-family: "DM Sans", Arial, sans-serif; }
 button, a { font: inherit; }
