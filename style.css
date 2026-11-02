@@ -1,3 +1,4 @@
+```css
 /* Cores e variáveis principais do site */
 :root {
   color-scheme: only light;
@@ -197,6 +198,7 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
 }
 
+/* Ano e indicação "por volta de" */
 .timeline-year {
   text-align: center;
   margin-bottom: 0.4rem;
@@ -204,7 +206,8 @@ a { color: inherit; text-decoration: none; }
 
 .timeline-year small {
   display: block;
-  color: var(--timeline-wine);
+  color: #94581a;
+  -webkit-text-fill-color: #94581a;
   font-family: "DM Sans", Arial, sans-serif;
   font-size: .58rem;
   letter-spacing: .08em;
@@ -217,17 +220,20 @@ a { color: inherit; text-decoration: none; }
 
 .timeline-year span {
   display: block;
-  color: var(--amber-deep);
+  color: #94581a;
+  -webkit-text-fill-color: #94581a;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(3rem, 5vw, 4.2rem);
   font-weight: 700;
   line-height: 1;
 }
 
+/* Títulos dos marcos */
 .timeline-title {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: var(--timeline-wine);
+  -webkit-text-fill-color: var(--timeline-wine) !important;
   font-weight: 600;
   margin: 0 0 1rem 0;
   line-height: 1.15;
@@ -271,14 +277,27 @@ a { color: inherit; text-decoration: none; }
   text-wrap: pretty;
 }
 
+/* Frase clicável para iniciar a linha do tempo */
 .timeline-intro-callout {
-  font-family: "Cormorant Garamond", serif;
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.35rem;
   font-style: italic;
   color: var(--amber-deep);
+  -webkit-text-fill-color: var(--amber-deep);
   font-weight: 600;
   margin-top: 1.8rem;
   text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Indicadores de navegação da linha do tempo */
+.timeline-block .scroll-cue {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  letter-spacing: .02em;
+  text-transform: none;
 }
 
 /* Seção do quiz */
@@ -522,15 +541,14 @@ a { color: inherit; text-decoration: none; }
     box-shadow: inset 0 0 0 100px var(--amber-soft) !important;
   }
 
+  /* Mantém os indicadores no mesmo lugar ao passar o mouse */
   .scroll-cue:hover {
-    color: var(--amber-soft);
-    transform: translate(-50%, 3px);
+    color: #94581a !important;
+    -webkit-text-fill-color: #94581a !important;
   }
 
   .timeline-block .scroll-cue:hover {
-    color: #94581a !important;
-    -webkit-text-fill-color: #94581a !important;
-    transform: translateY(3px);
+    transform: translateX(-50%);
   }
 
   .option-btn:not(.selected):hover {
@@ -573,20 +591,7 @@ a { color: inherit; text-decoration: none; }
   .quiz-image { max-height: 220px; }
 }
 
-/* Mantém os títulos em cinza escuro */
-.timeline-year small,
-.timeline-title {
-  -webkit-text-fill-color: var(--timeline-wine) !important;
-  color: var(--timeline-wine) !important;
-}
-
-/* Mantém somente os anos em laranja escuro */
-.timeline-year span {
-  -webkit-text-fill-color: #94581a !important;
-  color: #94581a !important;
-}
-
-/* Indicadores de navegação com a mesma cor dos destaques */
+/* Indicadores da linha do tempo na cor dos destaques */
 .timeline-block .scroll-cue,
 .timeline-block .scroll-cue span,
 .timeline-block .scroll-cue span::after,
@@ -596,3 +601,4 @@ a { color: inherit; text-decoration: none; }
   color: #94581a !important;
   -webkit-text-fill-color: #94581a !important;
 }
+```
