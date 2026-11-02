@@ -5,11 +5,11 @@
   --ink: #161412;
   --paper: #f4efe6;
   --wine: #5a2225;
-  --timeline-wine: #94581a;
+  --timeline-wine: #70452a;
   --amber: #c47c32;
   --amber-soft: #d89f5b;
   --amber-deep: #94581a;
-  --line-light: rgba(22,20,18,.15);
+  --line-light: rgba(112,69,42,.35);
   --ease: cubic-bezier(.23,1,.32,1);
 }
 
@@ -183,6 +183,13 @@ a { color: inherit; text-decoration: none; }
   min-height: 100vh;
   justify-content: center;
   padding: 2rem 0;
+}
+
+/* Título "O Significado do Nome" */
+#significado .intro-text-box h2 {
+  color: var(--timeline-wine) !important;
+  -webkit-text-fill-color: var(--timeline-wine) !important;
+  forced-color-adjust: none;
 }
 
 .timeline-block .scroll-cue {
@@ -539,7 +546,7 @@ a { color: inherit; text-decoration: none; }
   }
 
   .timeline-block .scroll-cue:hover {
-    color: var(--amber) !important;
+    color: var(--timeline-wine) !important;
     transform: translateY(3px);
   }
 
@@ -583,7 +590,7 @@ a { color: inherit; text-decoration: none; }
   .quiz-image { max-height: 220px; }
 }
 
-/* Mantém os textos da linha do tempo em dourado */
+/* Mantém as cores dos textos da linha do tempo */
 .timeline-year span,
 .timeline-year small,
 .timeline-title,
