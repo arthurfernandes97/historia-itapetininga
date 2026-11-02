@@ -152,8 +152,10 @@ a {
   width: 220px;
   color: var(--ink) !important;
   background-color: var(--amber) !important;
-  color-scheme: dark;
-  forced-color-adjust: none;
+  
+  /* Força o navegador a ignorar a inversão automática do modo escuro */
+  color-scheme: only light !important;
+  -webkit-appearance: none;
 }
 
 .cover-cta:hover {
