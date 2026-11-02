@@ -1,12 +1,11 @@
 /* Cores e variáveis principais do site */
 :root {
-
   color-scheme: only light;
 
   --ink: #161412;
   --paper: #f4efe6;
   --wine: #5a2225;
-  --timeline-wine: #5a2225;
+  --timeline-wine: #94581a;
   --amber: #c47c32;
   --amber-soft: #d89f5b;
   --amber-deep: #94581a;
@@ -540,7 +539,7 @@ a { color: inherit; text-decoration: none; }
   }
 
   .timeline-block .scroll-cue:hover {
-    color: #732d30;
+    color: var(--amber) !important;
     transform: translateY(3px);
   }
 
@@ -584,13 +583,13 @@ a { color: inherit; text-decoration: none; }
   .quiz-image { max-height: 220px; }
 }
 
-/* Mantém os textos vinho da linha do tempo */
+/* Mantém os textos da linha do tempo em dourado */
 .timeline-year span,
 .timeline-year small,
 .timeline-title,
 .timeline-block .scroll-cue,
 .timeline-block .scroll-cue span::after {
-  -webkit-text-fill-color: #5a2225 !important;
-  color: #5a2225 !important;
+  -webkit-text-fill-color: var(--timeline-wine) !important;
+  color: var(--timeline-wine) !important;
   forced-color-adjust: none;
 }
