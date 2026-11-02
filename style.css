@@ -197,11 +197,11 @@ a { color: inherit; text-decoration: none; }
   transform: none;
   bottom: auto;
   margin-top: 2rem;
-  color: var(--timeline-wine);
+  color: var(--amber);
 }
 
 .timeline-block .scroll-cue span::after {
-  color: var(--timeline-wine);
+  color: var(--amber);
 }
 
 .timeline-eyebrow {
@@ -545,7 +545,7 @@ a { color: inherit; text-decoration: none; }
   }
 
   .timeline-block .scroll-cue:hover {
-    color: var(--timeline-wine) !important;
+    color: var(--amber) !important;
     transform: translateY(3px);
   }
 
@@ -589,12 +589,17 @@ a { color: inherit; text-decoration: none; }
   .quiz-image { max-height: 220px; }
 }
 
-/* Mantém as cores dos textos da linha do tempo */
+/* Mantém anos e títulos em cinza escuro */
 .timeline-year span,
 .timeline-year small,
-.timeline-title,
-.timeline-block .scroll-cue,
-.timeline-block .scroll-cue span::after {
+.timeline-title {
   -webkit-text-fill-color: var(--timeline-wine) !important;
   color: var(--timeline-wine) !important;
+}
+
+/* Indicadores de navegação em laranja */
+.timeline-block .scroll-cue,
+.timeline-block .scroll-cue span::after {
+  -webkit-text-fill-color: var(--amber) !important;
+  color: var(--amber) !important;
 }
