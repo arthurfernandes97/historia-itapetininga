@@ -1,5 +1,4 @@
 // Lista de perguntas do quiz
-
 const questions = [
   {
     image: "./assets/bolinho-de-frango.jpg",
@@ -79,7 +78,6 @@ const questions = [
 ];
 
 // Variáveis de controle do jogo
-
 let currentQuestionIndex = 0;
 let score = 0;
 let shuffledOptions = [];
@@ -87,7 +85,6 @@ let correctOptionValue = "";
 let selectedOptionValue = null;
 
 // Elementos da tela
-
 const questionArea = document.getElementById("question-area");
 const quizImage = document.getElementById("quiz-image");
 const quizQuestion = document.getElementById("quiz-question");
@@ -105,28 +102,22 @@ const finalScore = document.getElementById("final-score");
 const restartBtn = document.getElementById("restart-btn");
 
 // Mistura as alternativas para não ficarem na mesma ordem
-
 function shuffleArray(array) {
   let arr = [...array];
-
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
-
   return arr;
 }
 
 // Carrega a pergunta atual na tela
-
 function loadQuestion() {
   const currentQ = questions[currentQuestionIndex];
-
   progressFill.style.width = `${((currentQuestionIndex + 1) / questions.length) * 100}%`;
   quizCounter.innerText = `Pergunta ${currentQuestionIndex + 1} de ${questions.length}`;
-
+  
   selectedOptionValue = null;
-
   confirmBtn.classList.add("hidden");
   questionArea.classList.remove("hidden");
   quizFeedback.classList.add("hidden");
@@ -138,34 +129,27 @@ function loadQuestion() {
   shuffledOptions = shuffleArray(currentQ.options);
 
   // Cria os botões das alternativas
-
   shuffledOptions.forEach((optionText) => {
     const btn = document.createElement("button");
-
     btn.classList.add("option-btn");
     btn.innerText = optionText;
-
     btn.addEventListener("click", () => selectOptionCandidate(optionText, btn));
-
     quizOptions.appendChild(btn);
   });
 }
 
 // Seleciona a alternativa que o usuário clicou
-
 function selectOptionCandidate(optionText, selectedBtn) {
   selectedOptionValue = optionText;
-
   const optionButtons = quizOptions.querySelectorAll(".option-btn");
-
+  
   optionButtons.forEach(btn => btn.classList.remove("selected"));
-
   selectedBtn.classList.add("selected");
+
   confirmBtn.classList.remove("hidden");
 }
 
 // Confirma a resposta e mostra se acertou ou errou
-
 confirmBtn.addEventListener("click", () => {
   if (!selectedOptionValue) return;
 
@@ -176,10 +160,8 @@ confirmBtn.addEventListener("click", () => {
 
   if (selectedOptionValue === correctOptionValue) {
     score++;
-
     feedbackTitle.innerText = "Resposta Correta! ✓";
     feedbackTitle.className = "feedback-title correct-text";
-
   } else {
     feedbackTitle.innerText = `Resposta Incorreta! ✗ (Correta: ${correctOptionValue})`;
     feedbackTitle.className = "feedback-title incorrect-text";
@@ -190,10 +172,8 @@ confirmBtn.addEventListener("click", () => {
 });
 
 // Vai para a próxima pergunta ou tela final
-
 nextBtn.addEventListener("click", () => {
   currentQuestionIndex++;
-
   if (currentQuestionIndex < questions.length) {
     loadQuestion();
   } else {
@@ -202,26 +182,20 @@ nextBtn.addEventListener("click", () => {
 });
 
 // Mostra o resultado final do quiz
-
 function showResults() {
   quizCard.classList.add("hidden");
   quizResult.classList.remove("hidden");
-
   finalScore.innerText = `Você acertou ${score} de ${questions.length} perguntas!`;
 }
 
 // Reinicia o quiz
-
 restartBtn.addEventListener("click", () => {
   currentQuestionIndex = 0;
   score = 0;
-
   quizResult.classList.add("hidden");
   quizCard.classList.remove("hidden");
-
   loadQuestion();
 });
 
 // Inicia o quiz na primeira pergunta
-
 loadQuestion();
