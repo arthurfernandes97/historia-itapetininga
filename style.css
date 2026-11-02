@@ -1,7 +1,7 @@
 /* Cores e variáveis principais do site */
 :root {
-  /* Declara que o site já é escuro */
-  color-scheme: dark;
+
+  color-scheme: only light;
 
   --ink: #161412;
   --paper: #f4efe6;
@@ -12,19 +12,6 @@
   --amber-deep: #94581a;
   --line-light: rgba(22,20,18,.15);
   --ease: cubic-bezier(.23,1,.32,1);
-}
-
-/* Sinaliza suporte a tema escuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #161412;
-    --paper: #f4efe6;
-    --wine: #5a2225;
-    --timeline-wine: #5a2225;
-    --amber: #c47c32;
-    --amber-soft: #d89f5b;
-    --amber-deep: #94581a;
-  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -597,10 +584,12 @@ a { color: inherit; text-decoration: none; }
   .quiz-image { max-height: 220px; }
 }
 
-/* Protege os textos vinho contra alterações de cor */
+/* Mantém os textos vinho da linha do tempo */
 .timeline-year span,
 .timeline-year small,
-.timeline-title {
+.timeline-title,
+.timeline-block .scroll-cue,
+.timeline-block .scroll-cue span::after {
   -webkit-text-fill-color: #5a2225 !important;
   color: #5a2225 !important;
   forced-color-adjust: none;
