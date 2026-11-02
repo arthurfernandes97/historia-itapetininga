@@ -5,11 +5,11 @@
   --ink: #161412;
   --paper: #f4efe6;
   --wine: #5a2225;
-  --timeline-wine: #70452a;
+  --timeline-wine: #000000;
   --amber: #c47c32;
   --amber-soft: #d89f5b;
   --amber-deep: #94581a;
-  --line-light: rgba(112,69,42,.35);
+  --line-light: rgba(0, 0, 0, 0.35);
   --ease: cubic-bezier(.23,1,.32,1);
 }
 
