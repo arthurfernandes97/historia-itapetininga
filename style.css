@@ -237,8 +237,8 @@ a {
 }
 
 #significado {
-  min-height: auto;
-  justify-content: flex-start;
+  min-height: 100vh;
+  justify-content: center;
   padding: 3rem 0;
 }
 
@@ -624,7 +624,7 @@ a {
 
   .city-hero {
     background-size: 100% auto;
-    background-position: center -10px;
+    background-position: center -5px;
     align-items: flex-end;
   }
 
