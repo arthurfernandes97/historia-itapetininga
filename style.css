@@ -217,7 +217,7 @@ a { color: inherit; text-decoration: none; }
 
 .timeline-year span {
   display: block;
-  color: var(--timeline-wine);
+  color: var(--amber-deep);
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(3rem, 5vw, 4.2rem);
   font-weight: 700;
@@ -573,12 +573,17 @@ a { color: inherit; text-decoration: none; }
   .quiz-image { max-height: 220px; }
 }
 
-/* Mantém anos e títulos em cinza escuro */
-.timeline-year span,
+/* Mantém os títulos em cinza escuro */
 .timeline-year small,
 .timeline-title {
   -webkit-text-fill-color: var(--timeline-wine) !important;
   color: var(--timeline-wine) !important;
+}
+
+/* Mantém somente os anos em laranja escuro */
+.timeline-year span {
+  -webkit-text-fill-color: #94581a !important;
+  color: #94581a !important;
 }
 
 /* Indicadores de navegação com a mesma cor dos destaques */
