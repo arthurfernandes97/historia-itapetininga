@@ -197,11 +197,11 @@ a { color: inherit; text-decoration: none; }
   transform: none;
   bottom: auto;
   margin-top: 2rem;
-  color: var(--amber);
+  color: var(--amber-deep);
 }
 
 .timeline-block .scroll-cue span::after {
-  color: var(--amber);
+  color: var(--amber-deep);
 }
 
 .timeline-eyebrow {
@@ -545,7 +545,7 @@ a { color: inherit; text-decoration: none; }
   }
 
   .timeline-block .scroll-cue:hover {
-    color: var(--amber) !important;
+    color: var(--amber-deep) !important;
     transform: translateY(3px);
   }
 
@@ -597,9 +597,9 @@ a { color: inherit; text-decoration: none; }
   color: var(--timeline-wine) !important;
 }
 
-/* Indicadores de navegação em laranja */
+/* Indicadores de navegação no mesmo laranja dos destaques */
 .timeline-block .scroll-cue,
 .timeline-block .scroll-cue span::after {
-  -webkit-text-fill-color: var(--amber) !important;
-  color: var(--amber) !important;
+  -webkit-text-fill-color: var(--amber-deep) !important;
+  color: var(--amber-deep) !important;
 }
