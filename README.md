@@ -80,8 +80,8 @@ historia-itapetininga/
 ├── index.html
 ├── style.css
 ├── script.js
-├── assets/        imagens da capa, da linha do tempo e do quiz
-├── docs/          prints do site, cartaz e foto da exposição
+├── assets/        
+├── docs/          
 └── README.md
 ```
 
